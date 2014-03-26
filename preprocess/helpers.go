@@ -20,7 +20,7 @@ var helpers = template.FuncMap{
 	"image":  magicImage,
 }
 
-func amazon(ASIN string, quantity int) string {
+func amazon(tagName, ASIN string, quantity int) string {
 	u, _ := url.Parse(fmt.Sprintf("http://www.amazon.com/dp/%s/", ASIN))
 	v := url.Values{}
 	v.Set("tag", tagName)
